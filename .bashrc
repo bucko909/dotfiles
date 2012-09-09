@@ -76,6 +76,9 @@ alias xfig="xfig -specialtext -latexfonts -startlatexFont default"
 
 if ! echo "$PATH"|grep -q home; then 
 	PATH="$HOME/bin:$PATH"
+	if [ -d "$HOME/bin/$HOSTNAME" ]; then
+		PATH="$HOME/bin/$HOSTNAME:$PATH"
+	fi
 fi
 if ! echo "$PATH"|grep -q sbin; then 
 	PATH="$PATH:/usr/sbin:/sbin"
