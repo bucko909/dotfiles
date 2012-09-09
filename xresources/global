@@ -1,0 +1,6 @@
+XTerm*background: black
+XTerm*foreground: white
+XTerm*VT100.translations: #override \n\
+	Shift <Key>Left: string(0x1b) string("[D") \n \
+	Shift <Key>Right: string(0x1b) string("[C") \n
+XTerm*metaSendsEscape: true
